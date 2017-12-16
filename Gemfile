@@ -9,7 +9,7 @@ gem 'rails', '~> 5.1.4'
 
 gem 'devise', '~> 4.3.0'
 gem 'devise-i18n'
-gem 'russian'
+gem 'rails-i18n'
 gem 'twitter-bootstrap-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
