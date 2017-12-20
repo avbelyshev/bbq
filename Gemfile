@@ -14,6 +14,9 @@ gem 'twitter-bootstrap-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 
+gem 'carrierwave'
+gem 'rmagick'
+
 group :production do
   gem 'pg'
 end
