@@ -4,14 +4,16 @@
 
   <div class="col-md-6 buffer-top">
 
-    <div class="form-group">
-      <%= f.email_field :email, autofocus: true, placeholder: "Email", class: 'span2' %>
-      <span class="add-on"><i class="glyphicon glyphicon-envelope"></i></span>
+    <div class="form-group has-feedback">
+      <%= f.email_field :email, autofocus: true, placeholder: "Email", class: 'span2 form-control' %>
+      <span class="add-on form-control-feedback">
+        <i class="glyphicon glyphicon-envelope form-control-feedback"></i></span>
     </div>
 
-    <div class="form-group">
-      <%= f.password_field :password, autocomplete: "off", placeholder: "Пароль", class: 'span2' %>
-      <span class="add-on"><i class="glyphicon glyphicon-lock"></i></span>
+    <div class="form-group has-feedback">
+      <%= f.password_field :password, autocomplete: "off", placeholder: "Пароль", class: 'span2 form-control' %>
+      <span class="add-on form-control-feedback">
+        <i class="glyphicon glyphicon-lock form-control-feedback"></i></span>
     </div>
 
   <% if devise_mapping.rememberable? -%>
@@ -22,12 +24,11 @@
   <% end -%>
 
     <div class="actions">
-      <%= f.submit "Зарегистрироваться", class: 'btn btn-primary' %>
+      <%= f.submit "Войти", class: 'btn btn-primary' %>
     </div>
 
     <div class="buffer-top">
-      <%= link_to 'Войти', new_user_session_path %><br />
-      <%= link_to "Забыли пароль?", new_user_password_path %><br />
+      <%= render "devise/shared/links" %>
     </div>
   </div>
 <% end %>
