@@ -72,3 +72,19 @@ ru:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
     subscriber_error: 'Нельзя подписаться на свое событие'
     email_error: 'Введенный email занят'
+
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
