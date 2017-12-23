@@ -1,8 +1,6 @@
 class SubscriptionsController < ApplicationController
   before_action :set_event, only: [:create, :destroy]
   before_action :set_subscription, only: [:destroy]
-  before_action :subscriber_verification, only: [:create]
-  before_action :email_verification, only: [:create]
 
   def create
     @new_subscription = @event.subscriptions.build(subscription_params)
@@ -39,17 +37,5 @@ class SubscriptionsController < ApplicationController
   def subscription_params
     # .fetch разрешает в params отсутствие ключа :subscription
     params.fetch(:subscription, {}).permit(:user_email, :user_name)
-  end
-
-  def subscriber_verification
-    if current_user == @event.user
-      redirect_to @event, alert: I18n.t('controllers.subscriptions.subscriber_error')
-    end
-  end
-
-  def email_verification
-    if current_user.blank? && User.find_by(email: subscription_params[:user_email]).present?
-      redirect_to @event, alert: I18n.t('controllers.subscriptions.email_error')
-    end
   end
 end
