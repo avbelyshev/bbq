@@ -73,6 +73,10 @@ ru:
     subscriber_error: 'Нельзя подписаться на свое событие'
     email_error: 'Введенный email занят'
 
+  photos:
+    photo:
+      destroy_confirm: 'Вы уверены, что хотите удалить эту фотографию?'
+
   event_mailer:
     comment:
       title: 'Новый комментарий'
