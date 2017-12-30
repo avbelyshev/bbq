@@ -14,3 +14,17 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+$(document).on('click', '[data-toggle="lightbox"]', function (event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});
+
+$(function(){
+  $('.event-photo-form').hide();
+
+  $('.event-photo-form-add').click(function(){
+    $('.event-photo-form').slideToggle({duration: 300});
+      return false;
+  });
+});
