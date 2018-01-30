@@ -1,24 +1,18 @@
-# README
+# Гоу на шашлыки! 
+Учебное приложение — организатор событий.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Рассчитано на работу с Heroku.
 
-Things you may want to cover:
+Предназначено для освоения работы с загрузкой файлов, аутентификацией, авторизацией, гемами devise, carrierwave, фреймворком bootstrap.
 
-* Ruby version
+Учит также основам работы с локализацией и YML файлами.
 
-* System dependencies
+При желании может быть взято за основу для полезного и серьезного проекта.
 
-* Configuration
+## Демо
+https://meetingfriends.herokuapp.com
 
-* Database creation
+## Установка
+Для установки своей копии приложения, клонируйте этот репозиторий. Измените url сайта в файле `config/environments/production.rb`. Затем задеплойте приложение на Heroku.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Для работы почты на хероку должен быть подключен SendGrid.
